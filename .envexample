@@ -1,0 +1,39 @@
+# .env.example
+
+# Environment Name
+NODE_ENV=development
+
+# Server listen to this port
+PORT=6060
+
+# Base Url
+BASE_URL=http://localhost:6060
+
+#Cors
+CORS_URL=*
+
+# Databse 
+# YOUR_MONGO_DB_NAME
+DB_NAME=starter-db
+
+#localhost or IP of the server
+# If using the docker installation then use 'mongo' for host name else localhost or ip or db server
+#YOUR_MONGO_DB_HOST_NAME 
+DB_HOST=localhost
+
+DB_PORT=27017
+
+# Log
+# Example '/home/node/logs'
+# DEFAUlT is this project's directory
+LOG_DIR=''
+
+# Token Info
+ACCESS_TOKEN_VALIDITY_DAYS=30
+REFRESH_TOKEN_VALIDITY_DAYS=120
+TOKEN_ISSUER=softylines.com
+TOKEN_AUDIENCE=softylines.com
+
+ADMIN_NAME=admin
+ADMIN_EMAIL=admin@admin.com
+ADMIN_PASS=admin1234
