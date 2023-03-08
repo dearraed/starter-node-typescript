@@ -5,6 +5,7 @@
 	"version": "2.0.0",
 	"configurations": [
 		{
+			
 			"type": "node",
 			"request": "launch",
 			"name": "Launch Program",

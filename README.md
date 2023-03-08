@@ -14,9 +14,9 @@ a) handle of authentication, authorisation.
 
 b) handle of apiError and apiResponse and configuration and handle of jwt and logger.
 
-c) contains basic model and repository.
+c) contains basic models and repositories.
 
-d) contains helpers to prevent using try catch (async handler), (role) to use the role as middleware, and configuration of (validator).
+d) contains helpers to prevent using try catch (async handler), (role) to use the role as middleware, and configuration of (validator joi).
 
 e) contains (app / config / server).ts files.
 

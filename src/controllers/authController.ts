@@ -11,6 +11,7 @@ import { validateTokenData, createTokens, getAccessToken } from '../auth/authUti
 import asyncHandler from '../helpers/asyncHandler';
 import bcryptjs from 'bcryptjs';
 import { Types } from 'mongoose';
+import bcrypt from 'bcryptjs';
 import _ from 'lodash';
 
 export const login = asyncHandler(async (req, res) => {
@@ -46,8 +47,12 @@ export const login = asyncHandler(async (req, res) => {
     const accessTokenKey = crypto.randomBytes(64).toString('hex');
     const refreshTokenKey = crypto.randomBytes(64).toString('hex');
     
+    const hashedPassword =  await bcrypt.hash(req.body.password, 12);
     const { user: createdUser, keystore } = await UserRepo.create(
-      { ...req.body } as User,
+       { 
+          ...req.body,
+          password: hashedPassword
+       } as User,
       accessTokenKey,
       refreshTokenKey,
       RoleCode.USER,
